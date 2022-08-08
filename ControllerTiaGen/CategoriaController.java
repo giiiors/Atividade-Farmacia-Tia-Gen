@@ -1,5 +1,7 @@
 package com.generation.ControllerTiaGen;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -19,7 +21,7 @@ public class CategoriaController {
 	private CategoriaRepository categoriaRepository;
 	
 	@GetMapping
-	public ResponseEntity<CategoriaModel>> getAll() {
+	public ResponseEntity<List<CategoriaModel>>getAll() {
 	return ResponseEntity.ok(categoriaRepository.findAll());
 	
 	}
